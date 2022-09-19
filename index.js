@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const fs = require("fs");
 const os = require("os");
+const path = require("path");
 const sio = require("socket.io-client");
 const diskUsage = require("diskusage");
 const cpuStats = require("cpu-stats");
@@ -29,7 +30,7 @@ client.on("sync", () => {
 });
 
 function getData(result) {
-    const du = diskUsage.checkSync("./")
+    const du = diskUsage.checkSync(path.parse(process.cwd()).root)
     const version = isWin ? os.version() : getOSRelease()?.pretty_name;
     const _os = `${version}(${os.type()} ${os.platform()} ${os.arch()} ${os.release()})`;
     const model = os.cpus()[0] ? os.cpus()[0].model : "unknown cpu";

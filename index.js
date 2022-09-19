@@ -6,9 +6,11 @@ const path = require("path");
 const sio = require("socket.io-client");
 const diskUsage = require("diskusage");
 const cpuStats = require("cpu-stats");
+const macOSRelease = require("macos-release");
 
 const URI = process.env.PCSC_URI || "https://pcss.eov2.com";
 const PASS = process.env.PASS;
+const HOSTNAME = process.env.HOSTNAME || os.hostname();
 const isWin = os.platform() === "win32";
 const isMac = os.platform() === "darwin";
 
@@ -31,13 +33,13 @@ client.on("sync", () => {
 
 function getData(result) {
     const du = diskUsage.checkSync(path.parse(process.cwd()).root)
-    const version = isWin ? os.version() : getOSRelease()?.pretty_name;
+    const version = isWin ? os.version() : isMac ? macOSRelease().name : getOSRelease()?.pretty_name;
     const _os = `${version}(${os.type()} ${os.platform()} ${os.arch()} ${os.release()})`;
     const model = os.cpus()[0] ? os.cpus()[0].model : "unknown cpu";
     const loadavg = isWin ? null : os.loadavg();
     const data = {
         _os,
-        hostname: os.hostname(),
+        hostname: HOSTNAME,
         version: process.version,
         cpu: {
             model,

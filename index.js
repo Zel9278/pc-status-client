@@ -29,7 +29,7 @@ client.on("sync", () => {
 });
 
 function getData(result) {
-    const du = diskUsage.checkSync(isWin ? "C:\\" : "/")
+    const du = diskUsage.checkSync("./")
     const version = isWin ? os.version() : getOSRelease()?.pretty_name;
     const _os = `${version}(${os.type()} ${os.platform()} ${os.arch()} ${os.release()})`;
     const model = os.cpus()[0] ? os.cpus()[0].model : "unknown cpu";

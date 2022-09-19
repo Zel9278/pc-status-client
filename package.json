@@ -1,9 +1,10 @@
 {
-  "dependencies": {
-    "cpu-stats": "^1.0.0",
-    "diskusage": "^1.1.3",
-    "dotenv": "^16.0.2",
-    "macos-release": "^3.1.0",
-    "socket.io-client": "^4.5.2"
-  }
+    "type": "module",
+    "dependencies": {
+        "cpu-stats": "^1.0.0",
+        "diskusage": "^1.1.3",
+        "dotenv": "^16.0.2",
+        "macos-release": "^3.1.0",
+        "socket.io-client": "^4.5.2"
+    }
 }

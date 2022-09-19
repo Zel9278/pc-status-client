@@ -1,12 +1,13 @@
-require("dotenv").config();
+import fs from "fs";
+import os from "os";
+import path from "path";
+import dotenv from "dotenv";
+import sio from "socket.io-client";
+import diskUsage from "diskusage";
+import cpuStats from "cpu-stats";
+import macOSRelease from "macos-release";
 
-const fs = require("fs");
-const os = require("os");
-const path = require("path");
-const sio = require("socket.io-client");
-const diskUsage = require("diskusage");
-const cpuStats = require("cpu-stats");
-const macOSRelease = require("macos-release");
+dotenv.config();
 
 const URI = process.env.PCSC_URI || "https://pcss.eov2.com";
 const PASS = process.env.PASS;

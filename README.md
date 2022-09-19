@@ -1,6 +1,8 @@
 # PC Status Client
 PCの状態を取得し，[PC Status](https://pc-stats.eov2.com/)に送信，表示するツールです。
 
+![image](https://cdn.discordapp.com/attachments/963367800821395466/1021358299603537930/unknown.png)
+
 ## 注意
 
 **ツールの性質上，以下の内容が他者に誰でも見られる状態で送信されるため，少しでも不快感を感じる人であれば使用しないでください。**  

@@ -7,12 +7,12 @@ const sio = require("socket.io-client");
 const diskUsage = require("diskusage");
 const cpuStats = require("cpu-stats");
 
-const uri = process.env.PCSC_URI || "https://pcss.eov2.com";
+const URI = process.env.PCSC_URI || "https://pcss.eov2.com";
 const PASS = process.env.PASS;
 const isWin = os.platform() === "win32";
 const isMac = os.platform() === "darwin";
 
-const client = sio(uri);
+const client = sio(URI);
 
 client.on("hi", () => {
     console.log("hi from server");

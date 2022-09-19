@@ -63,5 +63,6 @@ pm2 save
 
 ```
 git pull
+npm i # パッケージのアップデートなどがあった場合
 pm2 restart
 ```

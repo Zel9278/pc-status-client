@@ -38,6 +38,18 @@ HOSTNAME=ホスト名として表示させたい文字列
 ```env
 PASS=ここに予め聞いたパスワードを入力
 ```
+### これをやる前に
+
+以下のコマンドを実行してください
+```
+corepack enable
+corepack enable npm
+corepack enable yarn
+corepack enable pnpm
+corepack prepare npm@8.19.2 --activate #バージョンが変わっている場合があるので注意
+corepack prepare yarn@3.2.3 --activate #バージョンが変わっている場合があるので注意
+corepack prepare pnpm@7.12.1 --activate #バージョンが変わっている場合があるので注意
+```
 
 6. 以下のコマンドを実行
 

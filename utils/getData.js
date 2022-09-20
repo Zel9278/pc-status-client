@@ -16,6 +16,7 @@ module.exports = (result) => {
     const _os = `${version}(${os.type()} ${os.platform()} ${os.arch()} ${os.release()})`;
     const model = os.cpus()[0] ? os.cpus()[0].model : "unknown cpu";
     const loadavg = isWin ? null : os.loadavg();
+
     const data = {
         _os,
         hostname: HOSTNAME,

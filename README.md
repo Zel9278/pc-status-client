@@ -8,11 +8,11 @@ PCの状態を取得し，[PC Status](https://pc-stats.eov2.com/)に送信，表
 **ツールの性質上，以下の内容が他者に誰でも見られる状態で送信されるため，少しでも不快感を感じる人であれば使用しないでください。**  
 個人情報に繋がるような情報は**ホスト名を除き**送信される事はありませんが，必要に応じてPCのホスト名を変更するか，或いは `.env` 内に以下のKeyを追加してください。
 
-このプロジェクトはCorepack([pnpm](https://github.com/pnpm/pnpm))を使用しています。
-
 ```env
 HOSTNAME=ホスト名として表示させたい文字列
 ```
+
+**このプロジェクトはCorepack([pnpm](https://github.com/pnpm/pnpm))を使用しています。**
 
 ## 送信，表示内容
 1. PCのホスト名 (e.g. `assault-e5dmts`)

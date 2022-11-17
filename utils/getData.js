@@ -43,7 +43,5 @@ module.exports = (result) => {
         gpu,
     };
 
-    console.log(data);
-
     return data;
 }

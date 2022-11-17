@@ -5,6 +5,7 @@ module.exports = () => {
     try {
         const gpuInfo = child_process.execSync("nvidia-smi --format=csv --query-gpu=name,utilization.gpu,memory.free,memory.total", {
             windowsHide: true,
+            stdio: "pipe",
         })
         .toString();
         gpuInfo.split("\n")

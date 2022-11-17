@@ -4,13 +4,14 @@ PCの状態を取得し，[PC Status](https://pc-stats.eov2.com/)に送信，表
 ![image](https://cdn.discordapp.com/attachments/963367800821395466/1021358299603537930/unknown.png)
 
 ## 注意
-
 **ツールの性質上，以下の内容が他者に誰でも見られる状態で送信されるため，少しでも不快感を感じる人であれば使用しないでください。**  
 個人情報に繋がるような情報は**ホスト名を除き**送信される事はありませんが，必要に応じてPCのホスト名を変更するか，或いは `.env` 内に以下のKeyを追加してください。
 
 ```env
 HOSTNAME=ホスト名として表示させたい文字列
 ```
+
+⚠️ **Node.jsのバージョンはv16からv18までのみ対応しています。** ⚠️
 
 **このプロジェクトはCorepack([pnpm](https://github.com/pnpm/pnpm))を使用しています。**
 
@@ -23,9 +24,10 @@ HOSTNAME=ホスト名として表示させたい文字列
 3. CPU名，CPU使用率 (全体, コアごと) (e.g. `AMD Ryzen 5 3500 6-Core Processor`)
 4. メモリ使用量
 5. ストレージ占有量 (実行しているrootを参照)
-6. 起動時間
-7. Nodeのバージョン
-8. Load Average (Linuxのみ)
+6. GPU使用率 (NVIDIAのGPUのみ)
+7. 起動時間
+8. Nodeのバージョン
+9. Load Average (Linuxのみ)
 
 ## 使い方
 
@@ -42,21 +44,16 @@ PASS=ここに予め聞いたパスワードを入力
 
 以下のコマンドを実行してください
 ```
-corepack enable
-corepack enable npm
-corepack enable yarn
-corepack enable pnpm
-corepack prepare npm@8.19.2 --activate #バージョンが変わっている場合があるので注意
-corepack prepare yarn@3.2.3 --activate #バージョンが変わっている場合があるので注意
-corepack prepare pnpm@7.12.1 --activate #バージョンが変わっている場合があるので注意
+corepack enable npm yarn pnpm
+corepack prepare npm@8.19.2 yarn@1.22.19 pnpm@7.16.1 --activate #バージョンが変わっている場合があるので注意
 ```
 
 6. 以下のコマンドを実行
 
 ```cmd
 REM Windowsの場合
-npm i
-npm i -g pm2 pm2-windows-startup
+pnpm i
+pnpm add -g pm2 pm2-windows-startup
 pm2 start . --name pcsc
 pm2 save
 pm2-startup install
@@ -64,12 +61,12 @@ pm2-startup install
 
 ```bash
 # Linuxの場合
-npm i
-npm i -g pm2
+pnpm i
+pnpm add -g pm2
 pm2 start . --name pcsc
 pm2 save
 pm2 startup
-# sudo env PATH=...みたいなコマンドが出てくるのでコピペ
+# sudo env PATH=...みたいなコマンドが出てくるのでコピペしてターミナルで実行
 pm2 save
 ```
 

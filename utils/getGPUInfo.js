@@ -3,7 +3,9 @@ const child_process = require("child_process");
 module.exports = () => {
     let res = {name: 0, usage: 0, memory: {free: 0, total: 0, percent: 0}};
     try {
-        const gpuInfo = child_process.execSync("nvidia-smi --format=csv --query-gpu=name,utilization.gpu,memory.free,memory.total")
+        const gpuInfo = child_process.execSync("nvidia-smi --format=csv --query-gpu=name,utilization.gpu,memory.free,memory.total", {
+            windowsHide: true,
+        })
         .toString();
         gpuInfo.split("\n")
             .filter(e=>e)

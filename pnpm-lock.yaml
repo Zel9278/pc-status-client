@@ -3,14 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   cpu-stats: 1.0.0
   diskusage: 1.1.3
-  dotenv: 16.0.2
-  socket.io-client: 4.5.2
+  dotenv: 16.0.3
+  socket.io-client: 4.5.3
 
 dependencies:
   cpu-stats: 1.0.0
   diskusage: 1.1.3
-  dotenv: 16.0.2
-  socket.io-client: 4.5.2
+  dotenv: 16.0.3
+  socket.io-client: 4.5.3
 
 packages:
 
@@ -42,13 +42,13 @@ packages:
       nan: 2.16.0
     dev: false
 
-  /dotenv/16.0.2:
-    resolution: {integrity: sha512-JvpYKUmzQhYoIFgK2MOnF3bciIZoItIIoryihy0rIA+H4Jy0FmgyKYAHCTN98P5ybGSJcIFbh6QKeJdtZd1qhA==}
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
     dev: false
 
-  /engine.io-client/6.2.2:
-    resolution: {integrity: sha512-8ZQmx0LQGRTYkHuogVZuGSpDqYZtCM/nv8zQ68VZ+JkOpazJ7ICdsSpaO6iXwvaU30oFg5QJOJWj8zWqhbKjkQ==}
+  /engine.io-client/6.2.3:
+    resolution: {integrity: sha512-aXPtgF1JS3RuuKcpSrBtimSjYvrbhKW9froICH4s0F3XQWLxsKNxqzG39nnvQZQnva4CMvUK63T7shevxRyYHw==}
     dependencies:
       '@socket.io/component-emitter': 3.1.0
       debug: 4.3.4
@@ -78,13 +78,13 @@ packages:
     resolution: {integrity: sha512-UdAqHyFngu7TfQKsCBgAA6pWDkT8MAO7d0jyOecVhN5354xbLqdn8mV9Tat9gepAupm0bt2DbeaSC8vS52MuFA==}
     dev: false
 
-  /socket.io-client/4.5.2:
-    resolution: {integrity: sha512-naqYfFu7CLDiQ1B7AlLhRXKX3gdeaIMfgigwavDzgJoIUYulc1qHH5+2XflTsXTPY7BlPH5rppJyUjhjrKQKLg==}
+  /socket.io-client/4.5.3:
+    resolution: {integrity: sha512-I/hqDYpQ6JKwtJOf5ikM+Qz+YujZPMEl6qBLhxiP0nX+TfXKhW4KZZG8lamrD6Y5ngjmYHreESVasVCgi5Kl3A==}
     engines: {node: '>=10.0.0'}
     dependencies:
       '@socket.io/component-emitter': 3.1.0
       debug: 4.3.4
-      engine.io-client: 6.2.2
+      engine.io-client: 6.2.3
       socket.io-parser: 4.2.1
     transitivePeerDependencies:
       - bufferutil

@@ -4,6 +4,7 @@ const diskUsage = require("diskusage");
 const getMacOSRelease = require("./getMacOSRelease");
 const getOSRelease = require("./getOSRelease");
 const unixToDate = require("./unixToDate");
+const getGPUInfo = require("./getGPUInfo");
 
 const HOSTNAME = process.env.HOSTNAME || os.hostname();
 
@@ -16,6 +17,7 @@ module.exports = (result) => {
     const _os = `${version}(${os.type()} ${os.platform()} ${os.arch()} ${os.release()})`;
     const model = os.cpus()[0] ? os.cpus()[0].model : "unknown cpu";
     const loadavg = isWin ? null : os.loadavg();
+    const gpu = getGPUInfo();
 
     const data = {
         _os,
@@ -38,7 +40,10 @@ module.exports = (result) => {
         },
         uptime: unixToDate(os.uptime() * 1000),
         loadavg,
+        gpu,
     };
+
+    console.log(data);
 
     return data;
 }

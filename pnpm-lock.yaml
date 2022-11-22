@@ -4,13 +4,13 @@ specifiers:
   cpu-stats: 1.0.0
   diskusage: 1.1.3
   dotenv: 16.0.3
-  socket.io-client: 4.5.3
+  socket.io-client: 4.5.4
 
 dependencies:
   cpu-stats: 1.0.0
   diskusage: 1.1.3
   dotenv: 16.0.3
-  socket.io-client: 4.5.3
+  socket.io-client: 4.5.4
 
 packages:
 
@@ -78,8 +78,8 @@ packages:
     resolution: {integrity: sha512-UdAqHyFngu7TfQKsCBgAA6pWDkT8MAO7d0jyOecVhN5354xbLqdn8mV9Tat9gepAupm0bt2DbeaSC8vS52MuFA==}
     dev: false
 
-  /socket.io-client/4.5.3:
-    resolution: {integrity: sha512-I/hqDYpQ6JKwtJOf5ikM+Qz+YujZPMEl6qBLhxiP0nX+TfXKhW4KZZG8lamrD6Y5ngjmYHreESVasVCgi5Kl3A==}
+  /socket.io-client/4.5.4:
+    resolution: {integrity: sha512-ZpKteoA06RzkD32IbqILZ+Cnst4xewU7ZYK12aS1mzHftFFjpoMz69IuhP/nL25pJfao/amoPI527KnuhFm01g==}
     engines: {node: '>=10.0.0'}
     dependencies:
       '@socket.io/component-emitter': 3.1.0

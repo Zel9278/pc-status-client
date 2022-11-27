@@ -1,6 +1,6 @@
 {
     "name": "pc-status-client",
-    "packageManager": "pnpm@7.16.1",
+    "packageManager": "pnpm@7.17.1",
     "engines": {
         "npm": "This project is configured to use pnpm"
     },

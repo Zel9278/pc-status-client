@@ -1,6 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:js-app",
+    ":rebaseStalePrs",
+    ":disableRateLimiting",
+    ":maintainLockFilesWeekly",
+    ":label(dependencies)",
+    ":assignAndReview(Zel9278)",
+    ":semanticCommits",
+    ":disablePrControls"
   ]
 }

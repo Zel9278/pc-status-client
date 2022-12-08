@@ -45,7 +45,6 @@ PASS=ここに予め聞いたパスワードを入力
 以下のコマンドを実行してください
 ```
 corepack enable npm yarn pnpm
-corepack prepare npm@8.19.2 yarn@1.22.19 pnpm@7.16.1 --activate #バージョンが変わっている場合があるので注意
 ```
 
 6. 以下のコマンドを実行

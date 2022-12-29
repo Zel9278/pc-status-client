@@ -1,6 +1,7 @@
 {
     "name": "pc-status-client",
     "packageManager": "pnpm@7.19.0",
+    "main": "src/index.js",
     "engines": {
         "npm": "This project is configured to use pnpm"
     },

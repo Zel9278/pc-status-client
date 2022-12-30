@@ -1,0 +1,13 @@
+version: "3"
+services:
+    pc-status-client:
+        container_name: pc-status-client
+        pull_policy: always
+        build: .
+        env_file: .env
+        restart: always
+        volumes:
+            - type: bind
+              read_only: true
+              source: '/etc/os-release'
+              target: '/etc/os-release'

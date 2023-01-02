@@ -4,7 +4,7 @@ const sio = require("socket.io-client");
 const cpuStats = require("cpu-stats");
 const getData = require("./utils/getData");
 
-const URI = process.env.PCSC_URI || "https://pcss.eov2.com";
+const URI = process.env.PCSC_URI || "https://pcss.eov2.com/server";
 const PASS = process.env.PASS;
 
 const client = sio(URI);

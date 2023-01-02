@@ -78,5 +78,5 @@ pm2 save
 ```console
 git pull
 pnpm i # If there is a package update etc.
-pm2 restart
+pm2 restart pcsc
 ```

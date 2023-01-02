@@ -13,7 +13,7 @@ client.on("hi", () => {
     console.log("hi from server");
     cpuStats(1000, (error, result) => {
         const data = getData(result);
-        client.emit("hi", { pass: PASS, data });
+        client.emit("hi",  data, PASS);
     });
 });
 

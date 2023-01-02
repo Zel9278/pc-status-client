@@ -53,7 +53,7 @@ corepack enable npm yarn pnpm
 REM Windowsの場合
 pnpm i
 pnpm add -g pm2 pm2-windows-startup
-pm2 start . --name pcsc
+pm2 start "pnpm node ." --name pcsc
 pm2 save
 pm2-startup install
 ```

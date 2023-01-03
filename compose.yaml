@@ -11,3 +11,4 @@ services:
               read_only: true
               source: '/etc/os-release'
               target: '/etc/os-release'
+        network_mode: "host"

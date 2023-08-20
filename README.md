@@ -1,4 +1,8 @@
 # PC Status Client
+
+## **⚠️ このレポジトリは非推奨です ⚠️**
+**このレポジトリは[kazukazu123123/pcsc-rs](https://github.com/kazukazu123123/pcsc-rs)に移動されました。**
+
 PCの状態を取得し，[PC Status](https://pc-stats.eov2.com/)に送信，表示するツールです。
 
 ![image](https://cdn.discordapp.com/attachments/963367800821395466/1021358299603537930/unknown.png)
